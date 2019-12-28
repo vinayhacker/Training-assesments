@@ -1,0 +1,72 @@
+import java.util.*;
+
+class Student
+{
+	public int sid;
+	public String sname;
+	public int sage;
+	public Student(int sid,String sname,int sage)
+	{
+		this.sid=sid;
+		this.sname=sname;
+		this.sage=sage;
+	}
+}
+
+class Training extends Student
+{
+	public int trainingId;
+	public String trainingName;
+	public Training(int sid,String sname,int sage,int trainingId,String trainingName)
+	{
+		super(sid,sname,sage);
+		this.trainingId=trainingId;
+		this.trainingName=trainingName;
+	}
+	
+		
+ 		
+		
+	
+	
+	
+}
+
+class Test
+{
+	public static void main(String args[])
+	{	
+		
+		Training c1=new Training(101,"john",12,1,"java");
+		Training c2=new Training(102,"cena",18,2,"c");
+		Training c3=new Training(103,"bravo",20,3,"c++");
+		Training c4=new Training(104,"champ",16,4,"csharp");
+		Training c5=new Training(105,"joe",19,5,"cric");
+
+		
+		ArrayList<Training> list = new ArrayList<Training>();
+    		list.add(c1);
+    		list.add(c2);
+    		list.add(c3);
+    		list.add(c4);
+    		list.add(c5);
+		Iterator itr=list.iterator();
+		while(itr.hasNext())
+		{  
+   		 Training st=(Training)itr.next();  
+    		 System.out.println("Student Id"+" "+st.sid+"\n"+"Student name"+" "+st.sname+"\n"+"Student age"+" "+st.sage+"\n"+"Training id"+""+st.trainingId+"\n"+"Training Name"+" "+st.trainingName);
+		 System.out.println("\n"); 
+		}    	
+	}	
+}
+
+ 
+
+
+
+
+
+
+
+
+
